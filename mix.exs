@@ -10,7 +10,7 @@ defmodule KinoExplorer.MixProject do
       version: @version,
       description: @description,
       name: "KinoExplorer",
-      elixir: "~> 1.14",
+      elixir: "~> 1.16",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       docs: docs(),
@@ -28,8 +28,8 @@ defmodule KinoExplorer.MixProject do
   defp deps do
     [
       {:kino, "~> 0.12.3"},
-      {:explorer, "~> 0.8.0"},
-      {:rustler, "~> 0.29.0", optional: true},
+      {:explorer, github: "H12/explorer"},
+      {:rustler, "~> 0.31.0", optional: true},
       {:ex_doc, "~> 0.31.0", only: :dev, runtime: false}
     ]
   end
